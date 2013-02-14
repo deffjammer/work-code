@@ -1,0 +1,27 @@
+01 |CPU1 Temp
+02 |CPU2 Temp
+03 |System Temp
+04 |CPU1 Vcore
+05 |CPU2 Vcore
+06 |+1.5V
+07 |+5V
+08 |+5VSB
+09 |+12V
+0A |-12V
+0B |+3.3V
+0C |+3.3VSB
+0D |VBAT 
+
+0E |Fan1 
+0F |Fan2
+10 |Fan3
+11 |Fan4
+12 |Fan5
+13 |Fan6
+14 |Fan7
+15 |Fan8
+AA |Intrusion
+
+17 |PS Status
+
+
