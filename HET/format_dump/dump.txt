@@ -1,0 +1,92 @@
+# begin ---------------------------------------------------------
+agentAddr        172.24.0.2
+alert            (False, 'X1--------,r1lead,0x01,fan', 1)
+alertSeverity    NON-RECOVERABLE
+epoch            1362755677.01
+event            lncGoingLow
+event1           0x00
+event2           0x00
+event3           0x00
+eventClassName   threshold
+eventOffset      0
+eventSourceType  0x20
+eventType        1
+flap_count       1
+flap_state       False
+guid             r1lead
+het_type         ipmi
+host             r1lead
+oid              .1.3.6.1.4.1.3183.1.1
+queryAddr        172.24.0.2
+sensorName       CPU1 Temp
+sensorNumber     0x01
+sensorThreshold  None
+sensorType       4
+sensorTypeName   fan
+sensorValue      lncGoingLow
+sn               X1--------
+specificTrap     0x00040100
+srcAddr          127.0.0.1
+timeStamp        1391422
+trapSourceType   0x20
+type             ipmi
+when             2013-03-08.09.14.37 CDT
+# end -----------------------------------------------------------
+
+
+
+agentAddr        172.24.0.2
+ het_type         ipmi                                     ## moved up to near the top
+ guid             r1lead                                   ## also moved up
+ host             r1lead                                   ## duplication - investigate
+ sn               X1--------                               ## moved up
+ alert            (False, 'X1--------,r1lead,0x5d,fan', 9) ## this line makes no sense, delete
+ alertSeverity    NON-RECOVERABLE
+ epoch            1362345911.04                            ## not useful, delete
+ event            lnrGoingLow
+ sensorName       None                                     ## the sensor detail is moved up
+ sensorNumber     0x5d
+ sensorThreshold  133
+ sensorTypeName   fan
+ sensorType       4                                       ## sensor type only used if sensortypename not avail
+ sensorValue      246
+ event1           0x54                                    ## event1,2,3 only listed if cannot translate
+ event2           0xf6
+ event3           0x85
+ eventClassName   threshold
+ eventOffset      4                                       ## only print this if it cannot be translated
+ eventSourceType  0x20                                    ## not useful, delete
+ eventType        1                                       ## only print this if eventClassName not available
+ flap_count       9
+ flap_since_epoch 1362345911.04                            ## not useful, delete
+ flap_since_when  2013-03-03.15.25.11 CDT
+ flap_state       False
+ oid              .1.3.6.1.4.1.3183.1.1                    ## sooo not useful, delete
+ queryAddr        172.24.0.2                               ## duplicate, delete
+ specificTrap     0x00040104                               ## not useful, delete
+ srcAddr          127.0.0.1                                ## not useful, delete
+ timeStamp        981709                                   ## delete
+ trapSourceType   0x20                                     ## delete
+ trouble          (False, None, None)                      ## delete
+ type             ipmi                                     ## delete
+ when             2013-03-03.15.25.11 CDT
+
+NEW
+
+agentAddr        172.24.0.2
+het_type         ipmi          
+guid             r1lead           
+sn               X1--------        
+alertSeverity    NON-RECOVERABLE
+event            lnrGoingLow
+sensorName       None               
+sensorNumber     0x5d
+sensorThreshold  133
+sensorTypeName   fan
+sensorValue      246
+eventClassName   threshold
+flap_count       9
+flap_since_when  2013-03-03.15.25.11 CDT
+flap_state       False
+when             2013-03-03.15.25.11 CDT
+
