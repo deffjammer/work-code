@@ -1,0 +1,5 @@
+modprobe ioc4_extint
+echo loopback >/sys/class/extint/extint0/source
+echo toggle >/sys/class/extint/extint0/mode
+echo $1 >/sys/class/extint/extint0/period
+cat /sys/class/extint/extint0/period
